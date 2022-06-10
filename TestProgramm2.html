@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://api.julitec.com/api/contact"></script> -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=O5IHbp_mnGa2DJH4MdX9s56u1TSRwzDzn762yFSkNDxlP2saZBS6S0r4bGZu3U4BG6yvGgSk_oDXEPFi0OrJsOFfAM1hQGVMnirmsXqCFIcJn6mRn7fXkz6rUjCesKSCGcrWmaZrqsoKZj0dp3lGUZKaWbA_yI6EjR2lZnJUVYE" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvOTc0MDEwODM0OTc4MjM0Mzk4Lzk4NDg5MzA1Nzg1NjA3MzgzOC9UZXN0UHJvZ3JhbW0yLmh0bWw"/><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<!-- action="https://api.julitec.com/api/contact" method="POST" -->
+		<form id="myform">
+			<label for="Id">ID: </label><input type="number" name="Id" /><p></p>
+			<label for="PrimarySearchTerm">PrimarySearchTerm: </label>
+            <input type="text" name="PrimarySearchTerm" /><p></p>
+			<label for="Gender">Gender: </label>
+            <input type="text" name="Gender" /><p></p>
+			<label for="FirstName">FirstName: </label><input type="text" name="FirstName" /><p></p>
+            <label for="Name">Name: </label><input type="text" name="Name" /><p></p>
+            <label for="Name2">Name2: </label><input type="text" name="Name2" /><p></p>
+            <label for="Name3">Name3: </label><input type="true" name="Name3" /><p></p>
+            <label for="Salutation">Salutation: </label><input type="true" name="Salutation" /><p></p>
+            <label for="TextSalutation">TextSalutation: </label><input type="text" name="TextSalutation" /><p>
+            <label for="Title">Title: </label><input type="text" name="Title" /><p></p>
+            <label for="Birthday">Birthday: </label><input type="date" name="Birthday"/></p>
+            <label for="IsActive">IsActive: </label><input type="boolean" name="IsActive" /></p>
+            <label for="AccountManager">AccountManager: </label><input type="text" name="AccountManager" /><p></p>
+            <label for="AccountManagerId">AccountManagerId: </label><input type="text" name="AccountManagerId" /><p></p>
+            <label for="CustomerNo">CustomerNo: </label><input type="text" name="CustomerNo" /><p></p>
+            <label for="VATIDNumber">VATIDNumber: </label><input type="text" name="VATIDNumber" /><p></p>
+            <label for="MainCategory">MainCategory: </label><input type="text" name="MainCategory" /><p></p>
+            
+            <label for="Newsletter">Newsletter: </label>
+            <input type="text" name="Newsletter" subname="tags" /><p></p>
+            <label for="Partner">Partner: </label>
+            <input type="text" name="Partner" subname="tags" /><p></p>
+            
+            <label for="BlockedForMailingList">BlockedForMailingList: </label><input type="boolean" name="BlockedForMailingList" /><p></p>
+            <label for="PersonCount">PersonCount: </label><input type="text" name="PersonCount" /><p></p>
+
+            <label for="Street">Street: </label>
+            <input type="text" name="Street" subname="Address" /><p></p>
+            <label for="ZipCode">ZipCode: </label>
+            <input type="text" name="ZipCode" subname="Address" /><p></p>
+            <label for="City">City: </label>
+            <input type="text" name="City" subname="Address" /><p></p>
+            <label for="State">State: </label>
+            <input type="text" name="State" subname="Address" /><p></p>
+            <label for="Country">Country: </label>
+            <input type="text" name="Country" subname="Address" /><p></p>
+            <label for="MailBox">MailBox: </label>
+            <input type="text" name="MailBox" subname="Address" /><p></p>
+            <label for="MailBoxZipCode">MailBoxZipCode: </label>
+            <input type="text" name="MailBoxZipCode" subname="Address" /><p></p>
+            <label for="AddressType">AddressType: </label>
+            <input type="text" name="AddressType" subname="Address" /><p></p>
+
+            <label for="PhoneOffice">PhoneOffice: </label>
+            <input type="text" name="PhoneOffice" subname="Communication" /><p></p>
+            <label for="EMailAddress">EMailAddress: </label>
+            <input type="text" name="EMailAddress" subname="Communication" /><p></p>
+            <label for="Homepage">Homepage: </label>
+            <input type="text" name="Homepage" subname="Communication" /><p></p>
+            <label for="Twitter">Twitter: </label>
+            <input type="text" name="Twitter" subname="Communication" /><p></p>
+            <label for="GooglePlus">GooglePlus: </label>
+            <input type="text" name="GooglePlus" subname="Communication" /><p></p>
+            <label for="YouTube">YouTube: </label>
+            <input type="text" name="YouTube" subname="Communication" /><p></p>
+            
+            <label for="Notes">Notes: </label><input type="text" name="Notes" /><p></p>
+            <label for="CreatedBy">CreatedBy: </label><input type="text" name="CreatedBy" /><p></p>
+            <label for="CreatedOn">CreatedOn: </label><input type="text" name="CreatedOn" /><p></p>
+            <label for="LastModifiedBy">LastModifiedBy: </label><input type="text" name="LastModifiedBy" /><p></p>
+            <label for="LastModifiedOn">LastModifiedOn: </label><input type="text" name="LastModifiedOn" /><p></p>
+            <label for="DiscountGroup">DiscountGroup: </label><input type="text" name="DiscountGroup" /><p></p>
+
+			<!-- <button type="submit" onclick="show()">Senden</button> -->
+			<button type="submit" onclick="f()">Senden</button>
+		</form>
+
+		<div id="nameNew"></div>
+
+		<script src="form.js"></script>
+	</body>
+</html>
